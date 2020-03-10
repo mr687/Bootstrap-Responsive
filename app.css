@@ -131,6 +131,27 @@ ul{
   position: fixed;
   overflow-y: auto;
 }
+#table #sidebar.mobile{
+  z-index: 3;
+  width: 70vw;
+}
+#table #overlay{
+  content: '';
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background: rgba(0,0,0,.22);
+  z-index: 1;
+  position: absolute;
+}
+#table #sidebar.hide{
+  display:none;
+}
+#table #right.full{
+  margin-left: 0;
+  width: 100%;
+}
 #table #right{
   position: fixed;
   height: 100vh !important;

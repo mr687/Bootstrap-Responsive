@@ -25,11 +25,11 @@
 
   <div class="d-flex" id="table">
     <!-- ==================Sidebar Section=================== -->
-    <section id="sidebar" class="text-white">
+    <div id="overlay" class="d-none"></div>
+    <section id="sidebar" class="text-white d-none d-md-block mobile">
       <div class="accordian" id="accordionExample">
         <ul>
           <li class="parent">
-            <button class="btn btn-link" data-toggle="collapse" type="button" data-target="#collapsePendidikan" aria-expanded="true" aria-controls="collapsePendidikan">Pendidikan</button>
             <ul id="collapsePendidikan" class="collapse" data-parent="#accordionExample">
               <li class="child"><a href="">I. Penduduk Berdasarkan Usia Sekolah</a></li>
               <li class="child"><a href="">II. Pendidikan Anak Usia Dini</a></li>
@@ -168,35 +168,23 @@
       
       <!-- ==================Header Section=================== -->
       <section id="header" class="py-2 px-4 text-white">
-        <div class="row">
-          <div class="col">
-            <a href="javascript:void(0)" class="nav-link text-uppercase text-white">Simpatiku</a>
-          </div>
-          <div class="col text-right">
-            <a href="javascript:window.history.go(-1)" class="nav-link text-white">Back</a>
-          </div>
-        </div>
+        <span class="float-left mt-2" style="cursor: pointer;" id="barr"><i class="fas fa-bars"></i></span>
+        <a href="javascript:void(0)" class="ml-3 nav-link text-uppercase text-white">Simpatiku</a>
+        <!-- <a href="javascript:window.history.go(-1)" class="nav-link text-white">Back</a> -->
       </section>
       <!-- ==================End Header Section=================== -->
       
 
       <!-- =====================Content Section================= -->
       <section id="table-content">
-        <div class="text-center">Lorem</div>
+        <div>Lorem</div>
       </section>
       <!-- =====================End Content Section================= -->
 
       <!-- ===================Footer Section========================= -->
       <footer>
-        <div class="container py-3">
-          <div class="row">
-            <div class="col">
-              Copyright 2020 &copy; Pemerintah Kota Bontang.
-            </div>
-            <div class="col text-right">
-              Support by @sedaphh.
-            </div>
-          </div>
+        <div class="container py-3 text-right">
+          Copyright 2020 &copy; Pemerintah Kota Bontang.
         </div>
       </footer>
     <!-- ===================End Footer Section========================= -->
@@ -210,7 +198,38 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="./fontawesome/js/fontawesome.min.js"></script>
+  <script src="./fontawesome/js/all.min.js"></script>
   <script src="./app.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      if ($('#sidebar').hasClass('d-none')) {
+        $('#right').addClass('full');
+      }
+
+      $('#barr').click(function() {
+        if (isMobile) {
+          $('#sidebar').toggleClass('d-none');
+          $('#overlay').toggleClass('d-none')
+        } else{
+          $('#sidebar').toggleClass('d-none');
+          $('#right').toggleClass('full');
+        }
+      })
+
+      $('#overlay').click(function() {
+        if (isMobile) {
+          $('#sidebar').toggleClass('d-none');
+          $('#overlay').toggleClass('d-none')
+        } else{
+          $('#sidebar').toggleClass('d-none');
+          $('#right').toggleClass('full');
+        }
+      })
+    })
+  </script>
   
 </body>
 </html>

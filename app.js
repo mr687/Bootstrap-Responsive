@@ -1,21 +1,19 @@
+let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
 $(document).ready(function() {
 
   Highcharts.chart('chart-stat', {
-
     title: {
       text: 'Angka Partisipasi Sekolah SD/MI/Sederajat'
     },    
-
     subtitle: {
         text: ''
     },
-
     yAxis: {
         title: {
             text: 'Jumlah'
         }
     },
-
     xAxis: {
         title: {
             text: 'Tahun'
@@ -23,7 +21,6 @@ $(document).ready(function() {
 
         categories: [2015,2016,2017,2018,2019]
     },
-
     legend: {
         layout: 'vertical',
         align: 'right',
