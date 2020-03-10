@@ -1,0 +1,217 @@
+@import url('./_variable.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family) !important;
+}
+
+/* ===========Global CSS======== */
+.btn.btn-primary{
+  background: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+header a.nav-link{
+  border-bottom: 2px solid transparent;
+  color: white !important;
+  margin-left: 5px;
+}
+header .nav-link.active{
+  border-bottom: 2px solid white;
+}
+header .nav-link:hover{
+  border-bottom: 2px solid white;
+}
+header .navbar{
+  background-color: var(--main-color);
+}
+footer{
+  background: var(--main-color);
+  color:white;
+}
+.page-title{
+  border-left: 3px solid var(--main-color);
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+img.img{
+  width: 100%;
+  max-width: 100% !important;
+  height: auto;
+}
+.rounded-circle{
+  border: 2px solid var(--main-color);
+}
+a{
+  color: #555;
+  text-decoration: none !important;
+}
+a:hover{
+  color: black;
+}
+.btn.btn-primary, .card{
+  border-radius: 0px !important;
+}
+.btn{
+  border-radius: 0px !important;
+}
+ul{
+  list-style: none;
+}
+.btn-link{
+  padding: 0;
+  color: #eee;
+}
+.btn-link:hover{
+  text-decoration: none;
+  color: white;
+}
+/* ===========END Global CSS======== */
+
+
+/* ========Home CSS=========== */
+#home{
+  margin-top: 6rem;
+}
+#home .news-time{
+  font-size: .7rem;
+  color: var(--grey-color);
+}
+#home .content-item{
+  margin-bottom: 2rem;
+}
+/* ========End Home CSS=========== */
+
+
+/* ========Data Statistik CSS============== */
+#stats{
+  margin-top: 6rem;
+}
+#stats .stat-item{
+  margin-bottom: 2rem;
+  height: 350px !important;
+  position: relative;
+}
+#stats .stat-item .btn{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+#stats .stat-item img{
+  max-height: 150px;
+}
+/* ========End Data Statistik CSS============== */
+
+
+/* ========Stat Detail CSS=============== */
+#stat-detail{
+  margin-top: 6rem;
+}
+/* ========End Stat Detail CSS=============== */
+
+
+/* ===========Table CSS================+ */
+#table *{
+  font-size: 14px;
+}
+#table #sidebar{
+  width: 20vw;
+  height: 100vh;
+  background: #2e2e2e;
+  position: fixed;
+  overflow-y: auto;
+}
+#table #right{
+  position: fixed;
+  height: 100vh !important;
+  margin-left: 20vw;
+}
+#table #right footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#table #right #header{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: var(--main-color);
+}
+#table #table-content{
+  margin-top: 53px;
+  padding: 1rem;
+  overflow-y: auto;
+  width: 80vw;
+  height: calc(100vh - 110px);
+}
+#table #sidebar .btn-link{
+  width: 100%;
+  text-align: left;
+}
+#table #sidebar ul li.parent{
+  border-bottom: 1px dashed white;
+  padding: 5px 10px;
+  color: white;
+}
+#table #sidebar ul li.parent ul{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+#table #sidebar li.child a{
+  color: white;
+}
+/* ===========END Table CSS================+ */
+
+
+/* ===========Kantor CSS================ */
+#kantor{
+  margin-top: 6rem;
+}
+#kantor .sosial{
+  background: white;
+  border: 1px solid rgba(0,0,0,.125);
+}
+#kantor .sosial div:not(:last-child){
+  border-right: 1px solid rgba(0,0,0,.125);
+}
+#kantor .sosial div{
+  cursor: pointer;
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#kantor .sosial div:hover{
+  opacity: .8;
+}
+#kantor #links li{
+  padding: 20px 15px;
+}
+#kantor #links li:not(:last-child){
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+/* ===========End Kantor CSS================ */
+
+
+
+/* =============Peta CSS================ */
+#peta{
+  margin-top: 6rem;
+  margin-bottom: 1.4rem;
+}
+#peta .peta-item{
+  margin-bottom: 1.4rem;
+}
+
+/* =============END Peta CSS================ */
