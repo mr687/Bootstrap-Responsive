@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: var(--font-family) !important;
 }
+html, body{
+  background: #f7f7f7;
+}
 
 /* ===========Global CSS======== */
 .btn.btn-primary{
@@ -75,6 +78,15 @@ ul{
   text-decoration: none;
   color: white;
 }
+#navbarSupportedContent.mobile{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: black none repeat scroll 0% 0%;
+  bottom: 0px;
+  width: 75%;
+  padding: 20px;
+}
 /* ===========END Global CSS======== */
 
 
@@ -96,19 +108,29 @@ ul{
 #stats{
   margin-top: 6rem;
 }
-#stats .stat-item{
-  margin-bottom: 2rem;
-  height: 350px !important;
-  position: relative;
+#stats .img-wrapper{
+  padding: .6rem 1.3rem;
 }
-#stats .stat-item .btn{
+#stats img.img{
+  max-width: 130px !important;
+}
+#stats .title{
+  font-size: .8rem;
+  font-weight: 700 !important;
+  padding: 0 2px;
+}
+#stats .btn{
+  width: 50%;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#stats .stat-item img{
-  max-height: 150px;
+#stats .row > [class*='col-'] .card {
+  height: 215px;
+}
+#stats .row > [class*='col-'] .card .card-body {
+  padding: 0 !important;
 }
 /* ========End Data Statistik CSS============== */
 
@@ -234,5 +256,25 @@ ul{
 #peta .peta-item{
   margin-bottom: 1.4rem;
 }
-
+#peta .desc-wrapper{
+  position: relative;
+}
+#peta .desc-wrapper .button-wrapper{
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+}
+#peta .desc-wrapper .button-wrapper .btn{
+  width: 100% !important;
+}
 /* =============END Peta CSS================ */
+
+
+/* ===============Responsive CSS================== */
+@media (min-width: 768px) {
+  #stats .row > .col-md-4 .card {
+    height: 270px;
+  }
+}
+/* ===============END Responsive CSS================== */

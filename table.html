@@ -26,7 +26,7 @@
   <div class="d-flex" id="table">
     <!-- ==================Sidebar Section=================== -->
     <div id="overlay" class="d-none"></div>
-    <section id="sidebar" class="text-white d-none d-md-block mobile">
+    <section id="sidebar" class="text-white d-none d-md-block">
       <div class="accordian" id="accordionExample">
         <ul>
           <li class="parent">
@@ -169,8 +169,8 @@
       <!-- ==================Header Section=================== -->
       <section id="header" class="py-2 px-4 text-white">
         <span class="float-left mt-2" style="cursor: pointer;" id="barr"><i class="fas fa-bars"></i></span>
-        <a href="javascript:void(0)" class="ml-3 nav-link text-uppercase text-white">Simpatiku</a>
-        <!-- <a href="javascript:window.history.go(-1)" class="nav-link text-white">Back</a> -->
+        <a href="index.html" class="ml-3 nav-link text-uppercase text-white float-left">Simpatiku</a>
+        <a href="javascript:window.history.go(-1)" class="nav-link text-white float-right">Back</a>
       </section>
       <!-- ==================End Header Section=================== -->
       
@@ -205,8 +205,11 @@
   <script>
     $(document).ready(function() {
 
-      if ($('#sidebar').hasClass('d-none')) {
-        $('#right').addClass('full');
+      if (isMobile) {
+        $('#sidebar').toggleClass('mobile');
+        if ($('#sidebar').hasClass('d-none')) {
+          $('#right').addClass('full');
+        }
       }
 
       $('#barr').click(function() {

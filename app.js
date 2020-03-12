@@ -2,6 +2,10 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
 
 $(document).ready(function() {
 
+    if(isMobile) {
+        $('#navbarSupportedContent').toggleClass('mobile');
+    }
+
   Highcharts.chart('chart-stat', {
     title: {
       text: 'Angka Partisipasi Sekolah SD/MI/Sederajat'
